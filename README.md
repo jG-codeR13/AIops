@@ -506,40 +506,6 @@ docker build --platform linux/amd64 -t app:latest .
 - **AIOps**: Anomaly detection, predictive analytics, auto-remediation
 - **Security**: Least privilege, network segmentation, encryption
 
-### Interview Talking Points
-
-1. **"Walk me through the architecture"**
-   - Multi-tier architecture: ALB → ECS → Database abstraction
-   - Private subnets for security, public for ALB
-   - High availability across multiple AZs
-
-2. **"How does auto-scaling work?"**
-   - Lambda analyzes CloudWatch metrics every 5 minutes
-   - Statistical anomaly detection (mean, stdev, thresholds)
-   - Automatically scales ECS tasks up/down
-   - SNS alerts for human oversight
-
-3. **"How would you handle a production incident?"**
-   - Check Grafana dashboards for anomalies
-   - Review CloudWatch Logs for errors
-   - Use Lambda logs to see recent anomaly detection results
-   - Scale manually if needed: `aws ecs update-service --desired-count X`
-
-4. **"How do you ensure security?"**
-   - Private subnets isolate containers
-   - Security groups with least-privilege rules
-   - IAM roles with minimal permissions
-   - Encrypted data at rest and in transit
-
-5. **"What improvements would you make?"**
-   - Add HTTPS/SSL certificates
-   - Implement blue-green deployments
-   - Add distributed tracing (AWS X-Ray)
-   - Set up proper Prometheus with service discovery
-   - Implement secrets management (AWS Secrets Manager)
-   - Add database layer (RDS)
-
----
 
 ## Roadmap
 
@@ -567,30 +533,9 @@ docker build --platform linux/amd64 -t app:latest .
 
 ---
 
-## Contributing
-
-This is a portfolio project, but suggestions and improvements are welcome!
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
----
-
 ## License
 
 This project is open source and available under the MIT License.
-
----
-
-## Author
-
-**Danielle T. Felix**
-
-- Interview Project: AI-Powered Monitoring Platform
-- Skills Demonstrated: AWS, Terraform, Docker, Python, DevOps, AIOps
-- Contact: [tchonladanielle@gmail.com/www.linkedin.com/in/danielle-felix1/]
 
 ---
 
